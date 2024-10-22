@@ -1,0 +1,3 @@
+C:/Users/User/CLionProjects/sort-algorithm-visualization/cmake-build-debug/CMakeFiles/sort_algorithm_visualization.dir
+C:/Users/User/CLionProjects/sort-algorithm-visualization/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/CLionProjects/sort-algorithm-visualization/cmake-build-debug/CMakeFiles/rebuild_cache.dir

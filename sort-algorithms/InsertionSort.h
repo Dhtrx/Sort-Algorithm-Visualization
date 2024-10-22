@@ -1,0 +1,17 @@
+//
+// Created by User on 22.10.2024.
+//
+
+#ifndef SORT_ALGORITHM_VISUALIZATION_INSERTIONSORT_H
+#define SORT_ALGORITHM_VISUALIZATION_INSERTIONSORT_H
+
+#include "Sort.h"
+
+class InsertionSort : public Sort {
+public:
+    ~InsertionSort();
+    void sort() override;
+};
+
+
+#endif //SORT_ALGORITHM_VISUALIZATION_INSERTIONSORT_H
