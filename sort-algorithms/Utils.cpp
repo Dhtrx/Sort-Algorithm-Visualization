@@ -1,5 +1,5 @@
 //
-// Created by User on 22.10.2024.
+// Created by Daniel Hinkelmann on 22.10.2024.
 //
 
 #include "Utils.h"
@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void Utils::initArrRandom(int* arr, unsigned size) {
+void Utils::initArrRandom(int* arr, int size) {
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<> distribution(0, size);

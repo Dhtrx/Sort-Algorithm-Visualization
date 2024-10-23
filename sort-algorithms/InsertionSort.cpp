@@ -1,5 +1,5 @@
 //
-// Created by User on 22.10.2024.
+// Created by Daniel Hinkelmann on 22.10.2024.
 //
 
 #include "InsertionSort.h"

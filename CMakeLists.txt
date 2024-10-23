@@ -14,4 +14,6 @@ add_executable(sort_algorithm_visualization
         sort-algorithms/Utils.h
         sort-algorithms/Utils.cpp
         sort-algorithms/Sort.h
-        sort-algorithms/Sort.cpp)
+        sort-algorithms/Sort.cpp
+        sort-algorithms/SelectionSort.cpp
+        sort-algorithms/SelectionSort.h)
