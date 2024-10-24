@@ -70,6 +70,20 @@ build CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj: 
   OBJECT_DIR = CMakeFiles\sort_algorithm_visualization.dir
   OBJECT_FILE_DIR = CMakeFiles\sort_algorithm_visualization.dir\sort-algorithms
 
+build CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj: CXX_COMPILER__sort_algorithm_visualization_unscanned_Debug C$:/Users/User/CLionProjects/sort-algorithm-visualization/sort-algorithms/SelectionSort.cpp || cmake_object_order_depends_target_sort_algorithm_visualization
+  DEP_FILE = CMakeFiles\sort_algorithm_visualization.dir\sort-algorithms\SelectionSort.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/User/CLionProjects/sort-algorithm-visualization/sort-algorithms -IC:/Users/User/CLionProjects/sort-algorithm-visualization/visualization
+  OBJECT_DIR = CMakeFiles\sort_algorithm_visualization.dir
+  OBJECT_FILE_DIR = CMakeFiles\sort_algorithm_visualization.dir\sort-algorithms
+
+build CMakeFiles/sort_algorithm_visualization.dir/Test.cpp.obj: CXX_COMPILER__sort_algorithm_visualization_unscanned_Debug C$:/Users/User/CLionProjects/sort-algorithm-visualization/Test.cpp || cmake_object_order_depends_target_sort_algorithm_visualization
+  DEP_FILE = CMakeFiles\sort_algorithm_visualization.dir\Test.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/User/CLionProjects/sort-algorithm-visualization/sort-algorithms -IC:/Users/User/CLionProjects/sort-algorithm-visualization/visualization
+  OBJECT_DIR = CMakeFiles\sort_algorithm_visualization.dir
+  OBJECT_FILE_DIR = CMakeFiles\sort_algorithm_visualization.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sort_algorithm_visualization
@@ -78,7 +92,7 @@ build CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj: 
 #############################################
 # Link the executable sort_algorithm_visualization.exe
 
-build sort_algorithm_visualization.exe: CXX_EXECUTABLE_LINKER__sort_algorithm_visualization_Debug CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Utils.cpp.obj CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj
+build sort_algorithm_visualization.exe: CXX_EXECUTABLE_LINKER__sort_algorithm_visualization_Debug CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Utils.cpp.obj CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj CMakeFiles/sort_algorithm_visualization.dir/Test.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\sort_algorithm_visualization.dir
