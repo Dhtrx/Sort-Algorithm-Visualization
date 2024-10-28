@@ -9,7 +9,9 @@ Test::Test(int size) {
 }
 
 bool Test::testInsertionSort() {
-    InsertionSort sort = new Sort(size);
+    return false;
+}
 
+bool Test::isSorted(int *arr) {
     return false;
 }

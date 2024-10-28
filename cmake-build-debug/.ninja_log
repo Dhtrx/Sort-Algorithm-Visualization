@@ -1,0 +1,13 @@
+# ninja log v5
+25	1368	7518241928056958	build.ninja	d39dc55e9b50a588
+17	155	7518099876842376	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj	4b36088d8e6cdf16
+11	146	7518099876762641	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj	1846d8ad0d67a199
+6	3941	7518114161379581	CMakeFiles/sort_algorithm_visualization.dir/visualization/MainWindow.cpp.obj	cb4e0b3048b4e89a
+156	289	7518099878174599	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj	b2e1585ab0b182a8
+15	3933	7518225874083249	CMakeFiles/sort_algorithm_visualization.dir/main.cpp.obj	d0f1afdb5a8a608f
+6	1219	7518099887498165	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Utils.cpp.obj	951cd5557a4a78f0
+289	434	7518099879531813	CMakeFiles/sort_algorithm_visualization.dir/Test.cpp.obj	b5cffe0c59f33f89
+3934	4199	7518225876666540	sort_algorithm_visualization.exe	889d99d6d9d12107
+14	3520	7518243627685346	CMakeFiles/sort_algorithm_visualization.dir/visualization/MyWidget.cpp.obj	942724e3695aaab1
+10	201	7518243925517589	CMakeFiles/sort_algorithm_visualization.dir/Test.cpp.obj	b5cffe0c59f33f89
+202	555	7518243929013240	sort_algorithm_visualization.exe	e18a9a0c44447f65
