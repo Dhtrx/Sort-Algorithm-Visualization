@@ -16,6 +16,7 @@ public:
     Sort(int size);
     ~Sort();
     virtual void sort() = 0;
+    int pubSize;
 };
 
 

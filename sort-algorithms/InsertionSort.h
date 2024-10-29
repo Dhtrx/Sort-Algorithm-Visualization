@@ -9,6 +9,7 @@
 
 class InsertionSort : public Sort {
 public:
+    explicit InsertionSort(int size) : Sort(size) {}
     ~InsertionSort();
     void sort() override;
 };

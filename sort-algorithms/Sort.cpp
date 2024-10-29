@@ -6,6 +6,7 @@
 #include "Utils.h"
 
 Sort::Sort(int size) {
+    this->pubSize = size;
     this->size = size;
     this->unsorted = new int[size];
     this->sorted = new int[size];

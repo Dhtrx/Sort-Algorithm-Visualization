@@ -9,6 +9,7 @@
 
 class SelectionSort : public Sort {
 public:
+    explicit SelectionSort(int size) : Sort(size){}
     ~SelectionSort();
     void sort() override;
 };

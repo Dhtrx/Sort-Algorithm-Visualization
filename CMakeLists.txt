@@ -3,8 +3,8 @@ project(sort_algorithm_visualization)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_PREFIX_PATH "C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6")
-set(QML_IMPORT_PATH "${CMAKE_PREFIX_PATH}/qml")
+#set(CMAKE_PREFIX_PATH "C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6")
+#set(QML_IMPORT_PATH "${CMAKE_PREFIX_PATH}/qml")
 set(SOURCES main.cpp visualization/SortAlgorithmGui/SortAlgorithmGuiContent/resources.qrc)
 
 include_directories(sort-algorithms)
@@ -23,14 +23,13 @@ add_executable(sort_algorithm_visualization
         sort-algorithms/SelectionSort.h
         Test.h
         Test.cpp
-        visualization/MyWidget.h
-        visualization/MyWidget.cpp
+        visualization/MainWindow.h
+        visualization/MainWindow.cpp
 )
-
-set(Qt6_DIR "C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6")
 
 find_package(Qt6 COMPONENTS Core Gui Qml Quick Widgets REQUIRED)
 
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)

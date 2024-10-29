@@ -21,3 +21,4 @@ void InsertionSort::sort() {
         sorted[j + 1] = key;
     }
 }
+

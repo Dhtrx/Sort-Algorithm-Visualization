@@ -17,7 +17,7 @@ public:
         QLabel* label = new QLabel("Hello World", this); // create a label
     }
 };
-
+/*
 int main (int argc, char* argv[]) {
     // create a QApplication object that handles initialization,
     // finalization, and the main event loop
@@ -26,6 +26,7 @@ int main (int argc, char* argv[]) {
     widget.show(); //show the widget and its children
     return appl.exec(); // execute the application
 }
+ */
 
 
 #endif //SORT_ALGORITHM_VISUALIZATION_MYWIDGET_H
