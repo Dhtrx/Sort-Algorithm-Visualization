@@ -128,12 +128,28 @@ CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\sort-algorithms\SelectionSort.cpp -o CMakeFiles\sort_algorithm_visualization.dir\sort-algorithms\SelectionSort.cpp.s
 
+CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj: CMakeFiles/sort_algorithm_visualization.dir/flags.make
+CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj: CMakeFiles/sort_algorithm_visualization.dir/includes_CXX.rsp
+CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj: C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/sort-algorithms/MergeSort.cpp
+CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj: CMakeFiles/sort_algorithm_visualization.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj -MF CMakeFiles\sort_algorithm_visualization.dir\sort-algorithms\MergeSort.cpp.obj.d -o CMakeFiles\sort_algorithm_visualization.dir\sort-algorithms\MergeSort.cpp.obj -c C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\sort-algorithms\MergeSort.cpp
+
+CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\sort-algorithms\MergeSort.cpp > CMakeFiles\sort_algorithm_visualization.dir\sort-algorithms\MergeSort.cpp.i
+
+CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\sort-algorithms\MergeSort.cpp -o CMakeFiles\sort_algorithm_visualization.dir\sort-algorithms\MergeSort.cpp.s
+
 # Object files for target sort_algorithm_visualization
 sort_algorithm_visualization_OBJECTS = \
 "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj" \
 "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Utils.cpp.obj" \
 "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj" \
-"CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj"
+"CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj" \
+"CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj"
 
 # External object files for target sort_algorithm_visualization
 sort_algorithm_visualization_EXTERNAL_OBJECTS =
@@ -142,11 +158,12 @@ sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/so
 sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Utils.cpp.obj
 sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj
 sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj
+sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj
 sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/build.make
 sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/linkLibs.rsp
 sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/objects1.rsp
 sort_algorithm_visualization.exe: CMakeFiles/sort_algorithm_visualization.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable sort_algorithm_visualization.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sort_algorithm_visualization.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\sort_algorithm_visualization.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

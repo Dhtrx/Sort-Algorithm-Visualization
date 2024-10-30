@@ -80,12 +80,12 @@ clean: CMakeFiles/sort_algorithm_visualization.dir/clean
 CMakeFiles/sort_algorithm_visualization.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target sort_algorithm_visualization"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target sort_algorithm_visualization"
 .PHONY : CMakeFiles/sort_algorithm_visualization.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sort_algorithm_visualization.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\cmake-build-debug\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\cmake-build-debug\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/sort_algorithm_visualization.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Anwender\CLionProjects\Sort-algorithm-visualization\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/sort_algorithm_visualization.dir/rule

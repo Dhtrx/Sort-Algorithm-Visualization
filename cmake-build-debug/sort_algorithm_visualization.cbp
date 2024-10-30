@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/sort-algorithms/InsertionSort.h">
 			<Option target="sort_algorithm_visualization"/>
 		</Unit>
+		<Unit filename="C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/sort-algorithms/MergeSort.cpp">
+			<Option target="sort_algorithm_visualization"/>
+		</Unit>
+		<Unit filename="C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/sort-algorithms/MergeSort.h">
+			<Option target="sort_algorithm_visualization"/>
+		</Unit>
 		<Unit filename="C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/sort-algorithms/SelectionSort.cpp">
 			<Option target="sort_algorithm_visualization"/>
 		</Unit>

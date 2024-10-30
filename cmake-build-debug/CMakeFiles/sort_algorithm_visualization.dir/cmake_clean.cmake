@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj"
   "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj.d"
+  "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj"
+  "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj.d"
   "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj"
   "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj.d"
   "CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj"
