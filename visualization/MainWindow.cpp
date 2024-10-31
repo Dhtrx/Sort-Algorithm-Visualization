@@ -9,6 +9,7 @@
 #include <QtCharts>
 #include "QChartView"
 #include "QChart"
+#include "MergeSort.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(20, this)) {
     resize(600, 400);
@@ -56,6 +57,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new Q
 void MainWindow::initAlgoChooser() {
     this->algoChooser->addItem("Insertion Sort", QVariant(0));
     this->algoChooser->addItem("Selection Sort", QVariant(1));
+    this->algoChooser->addItem("Merge Sort", QVariant(2));
 }
 
 void MainWindow::onComboBoxChanged(int item) {
@@ -66,6 +68,10 @@ void MainWindow::onComboBoxChanged(int item) {
             break;
         case 1:
             this->sort = new SelectionSort(20, this);
+            updateChart();
+            break;
+        case 2:
+            this->sort = new MergeSort(20, this);
             updateChart();
             break;
     }

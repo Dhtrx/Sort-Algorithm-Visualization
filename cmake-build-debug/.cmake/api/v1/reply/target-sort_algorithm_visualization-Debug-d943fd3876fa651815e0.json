@@ -59,13 +59,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 35,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 28,
+				"line" : 30,
 				"parent" : 0
 			},
 			{
@@ -511,7 +511,8 @@
 				3,
 				5,
 				6,
-				9
+				9,
+				10
 			]
 		}
 	],
@@ -657,7 +658,8 @@
 				3,
 				5,
 				6,
-				9
+				9,
+				10
 			]
 		},
 		{
@@ -668,7 +670,8 @@
 				2,
 				4,
 				7,
-				8
+				8,
+				11
 			]
 		}
 	],
@@ -728,6 +731,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "visualization/MainWindow.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sort-algorithms/MergeSort.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "sort-algorithms/MergeSort.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

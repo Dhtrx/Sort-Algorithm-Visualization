@@ -152,6 +152,30 @@ sort-algorithms/InsertionSort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.s
 .PHONY : sort-algorithms/InsertionSort.cpp.s
 
+sort-algorithms/MergeSort.obj: sort-algorithms/MergeSort.cpp.obj
+.PHONY : sort-algorithms/MergeSort.obj
+
+# target to build an object file
+sort-algorithms/MergeSort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.obj
+.PHONY : sort-algorithms/MergeSort.cpp.obj
+
+sort-algorithms/MergeSort.i: sort-algorithms/MergeSort.cpp.i
+.PHONY : sort-algorithms/MergeSort.i
+
+# target to preprocess a source file
+sort-algorithms/MergeSort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.i
+.PHONY : sort-algorithms/MergeSort.cpp.i
+
+sort-algorithms/MergeSort.s: sort-algorithms/MergeSort.cpp.s
+.PHONY : sort-algorithms/MergeSort.s
+
+# target to generate assembly for a file
+sort-algorithms/MergeSort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/MergeSort.cpp.s
+.PHONY : sort-algorithms/MergeSort.cpp.s
+
 sort-algorithms/SelectionSort.obj: sort-algorithms/SelectionSort.cpp.obj
 .PHONY : sort-algorithms/SelectionSort.obj
 
@@ -236,6 +260,9 @@ help:
 	@echo ... sort-algorithms/InsertionSort.obj
 	@echo ... sort-algorithms/InsertionSort.i
 	@echo ... sort-algorithms/InsertionSort.s
+	@echo ... sort-algorithms/MergeSort.obj
+	@echo ... sort-algorithms/MergeSort.i
+	@echo ... sort-algorithms/MergeSort.s
 	@echo ... sort-algorithms/SelectionSort.obj
 	@echo ... sort-algorithms/SelectionSort.i
 	@echo ... sort-algorithms/SelectionSort.s

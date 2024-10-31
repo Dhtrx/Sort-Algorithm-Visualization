@@ -23,6 +23,8 @@ add_executable(sort_algorithm_visualization
         sort-algorithms/SelectionSort.h
         visualization/MainWindow.h
         visualization/MainWindow.cpp
+        sort-algorithms/MergeSort.cpp
+        sort-algorithms/MergeSort.h
 )
 
 find_package(Qt6 COMPONENTS Core Gui Qml Quick Widgets Charts REQUIRED)

@@ -39,6 +39,8 @@ private:
 private slots:
     void onComboBoxChanged(int item);
     void startSorting();
+
+    void merge(int *arr, int left, int mid, int right);
 };
 
 #endif //SORT_ALGORITHM_VISUALIZATION_MAINWINDOW_H
