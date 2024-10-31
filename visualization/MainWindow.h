@@ -11,7 +11,6 @@
 #include <QComboBox>
 #include <QMainWindow>
 
-#include "Sort.h"
 #include "InsertionSort.h"
 #include "SelectionSort.h"
 #include "QtCharts"
@@ -25,12 +24,13 @@ class MainWindow : public QMainWindow {
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
-    QBarSet* set;
+    QBarSet* getSet();
 
 private:
     QComboBox* algoChooser;
     void initAlgoChooser();
     Sort* sort;
+    QBarSet* set;
 
 
 private slots:

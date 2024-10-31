@@ -4,6 +4,7 @@
 
 #include "Sort.h"
 #include "Utils.h"
+#include "MainWindow.h"
 
 Sort::Sort(int size, MainWindow* mainWindow) {
     this->mainWindow = mainWindow;

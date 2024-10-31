@@ -2,6 +2,7 @@
 // Created by Daniel Hinkelmann on 23.10.2024.
 //
 #include "SelectionSort.h"
+#include "MainWindow.h"
 
 SelectionSort::~SelectionSort() {
     delete[] unsorted;

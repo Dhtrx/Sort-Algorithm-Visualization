@@ -4,6 +4,7 @@
 
 #include <thread>
 #include "InsertionSort.h"
+#include "MainWindow.h"
 InsertionSort::~InsertionSort() {
     delete[] unsorted;
     delete[] sorted;
@@ -23,7 +24,7 @@ void InsertionSort::sort() {
 
         //Update barSet of chart in gui
         for (int k = 0; k < size; ++k) {
-            *this->mainWindow->set << sorted[k];
+            *this->mainWindow->getSet() << sorted[k];
         }
 
         std::this_thread::sleep_for(std::chrono::seconds(1));

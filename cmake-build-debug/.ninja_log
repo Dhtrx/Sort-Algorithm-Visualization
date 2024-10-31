@@ -34,3 +34,8 @@
 25	4410	7520735999070988	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Utils.cpp.obj	750497857bf9aee
 20	476	7520736413693556	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj	3b98a5fec6276f0e
 49	576	7520736414839073	CMakeFiles/sort_algorithm_visualization.dir/Test.cpp.obj	9c67fbaf5cce2af2
+16	14935	7520806608325868	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Sort.cpp.obj	dc101ebf3163156a
+37	22243	7520807422838802	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj	3b98a5fec6276f0e
+58	22515	7520807425565921	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj	d16b64a53a51b960
+18	11188	7520807770558769	CMakeFiles/sort_algorithm_visualization.dir/visualization/MainWindow.cpp.obj	e6b1b2338cf149a1
+11189	11939	7520807778021173	sort_algorithm_visualization.exe	988c0dbcf131e2be

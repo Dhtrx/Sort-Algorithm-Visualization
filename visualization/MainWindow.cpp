@@ -3,13 +3,14 @@
 //
 
 #include "MainWindow.h"
+#include "Sort.h"
 #include <QVBoxLayout>
 #include <iostream>
 #include <QtCharts>
 #include "QChartView"
 #include "QChart"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(20)) {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(20, this)) {
     resize(600, 400);
     setWindowTitle("Sort Algorithm Visualization");
 
@@ -70,6 +71,10 @@ void MainWindow::onComboBoxChanged(int item) {
 
 void MainWindow::startSorting() {
     sort->sort();
+}
+
+QBarSet *MainWindow::getSet() {
+    return this->set;
 }
 
 MainWindow::~MainWindow() = default;
