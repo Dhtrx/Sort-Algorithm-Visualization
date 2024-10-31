@@ -5,7 +5,8 @@
 #include "Sort.h"
 #include "Utils.h"
 
-Sort::Sort(int size) {
+Sort::Sort(int size, MainWindow* mainWindow) {
+    this->mainWindow = mainWindow;
     this->pubSize = size;
     this->size = size;
     this->unsorted = new int[size];

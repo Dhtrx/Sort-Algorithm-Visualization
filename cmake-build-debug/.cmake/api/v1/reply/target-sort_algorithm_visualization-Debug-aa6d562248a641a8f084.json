@@ -38,6 +38,8 @@
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlDependencies.cmake",
+			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsTargets.cmake",
+			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsConfig.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
@@ -231,7 +233,7 @@
 			{
 				"command" : 3,
 				"file" : 15,
-				"line" : 57,
+				"line" : 55,
 				"parent" : 34
 			},
 			{
@@ -257,7 +259,7 @@
 			{
 				"command" : 3,
 				"file" : 17,
-				"line" : 55,
+				"line" : 57,
 				"parent" : 39
 			},
 			{
@@ -269,6 +271,32 @@
 				"file" : 16,
 				"line" : 61,
 				"parent" : 41
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 181,
+				"parent" : 4
+			},
+			{
+				"file" : 19,
+				"parent" : 43
+			},
+			{
+				"command" : 3,
+				"file" : 19,
+				"line" : 55,
+				"parent" : 44
+			},
+			{
+				"file" : 18,
+				"parent" : 45
+			},
+			{
+				"command" : 2,
+				"file" : 18,
+				"line" : 61,
+				"parent" : 46
 			},
 			{
 				"command" : 7,
@@ -301,6 +329,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"define" : "QT_CHARTS_LIB"
+				},
+				{
+					"backtrace" : 2,
 					"define" : "QT_CORE_LIB"
 				},
 				{
@@ -310,6 +342,10 @@
 				{
 					"backtrace" : 2,
 					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_OPENGLWIDGETS_LIB"
 				},
 				{
 					"backtrace" : 2,
@@ -377,11 +413,11 @@
 					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization"
 				},
 				{
-					"backtrace" : 43,
+					"backtrace" : 48,
 					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization/sort-algorithms"
 				},
 				{
-					"backtrace" : 44,
+					"backtrace" : 49,
 					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization/visualization"
 				},
 				{
@@ -448,6 +484,16 @@
 					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "C:/Qt/6.8.0/mingw_64/include/QtWidgets"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.8.0/mingw_64/include/QtCharts"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.8.0/mingw_64/include/QtOpenGLWidgets"
 				}
 			],
 			"language" : "CXX",
@@ -490,7 +536,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "C:\\Qt\\6.8.0\\mingw_64\\lib\\libQt6Widgets.a",
+				"fragment" : "C:\\Qt\\6.8.0\\mingw_64\\lib\\libQt6Charts.a",
 				"role" : "libraries"
 			},
 			{
@@ -530,12 +576,22 @@
 			},
 			{
 				"backtrace" : 9,
-				"fragment" : "C:\\Qt\\6.8.0\\mingw_64\\lib\\libQt6OpenGL.a",
+				"fragment" : "-luser32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 37,
+				"fragment" : "C:\\Qt\\6.8.0\\mingw_64\\lib\\libQt6OpenGLWidgets.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Qt\\6.8.0\\mingw_64\\lib\\libQt6Widgets.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 9,
-				"fragment" : "-luser32",
+				"fragment" : "C:\\Qt\\6.8.0\\mingw_64\\lib\\libQt6OpenGL.a",
 				"role" : "libraries"
 			},
 			{
@@ -549,32 +605,32 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 37,
+				"backtrace" : 42,
 				"fragment" : "-lmpr",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 37,
+				"backtrace" : 42,
 				"fragment" : "-luserenv",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 42,
+				"backtrace" : 47,
 				"fragment" : "-ld3d11",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 42,
+				"backtrace" : 47,
 				"fragment" : "-ldxgi",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 42,
+				"backtrace" : 47,
 				"fragment" : "-ldxguid",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 42,
+				"backtrace" : 47,
 				"fragment" : "-ld3d12",
 				"role" : "libraries"
 			},

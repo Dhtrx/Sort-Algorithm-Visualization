@@ -9,7 +9,7 @@
 
 class InsertionSort : public Sort {
 public:
-    explicit InsertionSort(int size) : Sort(size) {}
+    explicit InsertionSort(int size, MainWindow* mainWindow) : Sort(size, mainWindow) {}
     ~InsertionSort();
     void sort() override;
 };

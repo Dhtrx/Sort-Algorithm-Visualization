@@ -5,15 +5,17 @@
 #ifndef SORT_ALGORITHM_VISUALIZATION_SORT_H
 #define SORT_ALGORITHM_VISUALIZATION_SORT_H
 
+class MainWindow;
 
 class Sort {
 protected:
     int size;
     int* unsorted;
-    int* sorted;
+    MainWindow* mainWindow;
 
 public:
-    Sort(int size);
+    int* sorted;
+    Sort(int size, MainWindow* mainWindow);
     ~Sort();
     virtual void sort() = 0;
     int pubSize;

@@ -27,7 +27,7 @@ add_executable(sort_algorithm_visualization
         visualization/MainWindow.cpp
 )
 
-find_package(Qt6 COMPONENTS Core Gui Qml Quick Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Core Gui Qml Quick Widgets Charts REQUIRED)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
@@ -40,4 +40,5 @@ target_link_libraries(sort_algorithm_visualization
         Qt6::Qml
         Qt6::Quick
         Qt6::Widgets
+        Qt6::Charts
 )

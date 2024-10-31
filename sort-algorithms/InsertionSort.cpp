@@ -2,6 +2,7 @@
 // Created by Daniel Hinkelmann on 22.10.2024.
 //
 
+#include <thread>
 #include "InsertionSort.h"
 InsertionSort::~InsertionSort() {
     delete[] unsorted;
@@ -19,6 +20,13 @@ void InsertionSort::sort() {
         }
 
         sorted[j + 1] = key;
+
+        //Update barSet of chart in gui
+        for (int k = 0; k < size; ++k) {
+            *this->mainWindow->set << sorted[k];
+        }
+
+        std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 }
 

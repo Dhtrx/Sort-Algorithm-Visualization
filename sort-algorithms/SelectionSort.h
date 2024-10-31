@@ -7,9 +7,10 @@
 
 #include "Sort.h"
 
+
 class SelectionSort : public Sort {
 public:
-    explicit SelectionSort(int size) : Sort(size){}
+    explicit SelectionSort(int size, MainWindow* mainWindow) : Sort(size, mainWindow){}
     ~SelectionSort();
     void sort() override;
 };

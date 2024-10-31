@@ -5,8 +5,11 @@
 #include "MainWindow.h"
 #include <QVBoxLayout>
 #include <iostream>
+#include <QtCharts>
+#include "QChartView"
+#include "QChart"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new QComboBox(this)) {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(20)) {
     resize(600, 400);
     setWindowTitle("Sort Algorithm Visualization");
 
@@ -17,8 +20,33 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new Q
     this->initAlgoChooser();
     connect(algoChooser, &QComboBox::currentIndexChanged, this, &MainWindow::onComboBoxChanged);
 
-    layout->addWidget(new QLabel("Choose an algorithm:"));
+    //Init Standard bar diagram with values from standard sort algorithm insertion sort
+    set = new QBarSet("Values");
+    for (int i = 0; i < sort->pubSize; ++i) {
+        *set << sort->sorted[i];
+    }
+
+    //Init Chart
+    auto* series = new QBarSeries();
+    series->append(set);
+
+    auto* chart = new QChart();
+    chart->addSeries(series);
+
+    auto* yAxis = new QValueAxis();
+    yAxis->setRange(0, 10);
+    chart->addAxis(yAxis, Qt::AlignLeft);
+
+    //Init chart view of chart
+    auto* view = new QChartView(chart);
+
+    //Init button for starting the sorting algorithm
+    auto* button = new QPushButton("Sort");
+    connect(button, &QPushButton::clicked, this, &MainWindow::startSorting);
+
     layout->addWidget(algoChooser);
+    layout->addWidget(view);
+    layout->addWidget(button);
 
     setCentralWidget(widget);
 
@@ -32,14 +60,16 @@ void MainWindow::initAlgoChooser() {
 void MainWindow::onComboBoxChanged(int item) {
     switch (dynamic_cast<QComboBox*>(sender())->itemData(item).toInt()) {
         case 0:
-            this->sort = new InsertionSort(5);
-            std::cout << this->sort->pubSize << std::endl;
+            this->sort = new InsertionSort(20, this);
             break;
         case 1:
-            this->sort = new SelectionSort(4);
-            std::cout << this->sort->pubSize << std::endl;
+            this->sort = new SelectionSort(20, this);
             break;
     }
+}
+
+void MainWindow::startSorting() {
+    sort->sort();
 }
 
 MainWindow::~MainWindow() = default;
