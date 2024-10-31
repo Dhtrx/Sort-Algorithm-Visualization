@@ -21,8 +21,6 @@ add_executable(sort_algorithm_visualization
         sort-algorithms/Sort.cpp
         sort-algorithms/SelectionSort.cpp
         sort-algorithms/SelectionSort.h
-        Test.h
-        Test.cpp
         visualization/MainWindow.h
         visualization/MainWindow.cpp
 )

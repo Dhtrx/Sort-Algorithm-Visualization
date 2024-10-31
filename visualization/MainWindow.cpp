@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new Q
 
     //Init Standard bar diagram with values from standard sort algorithm insertion sort
     set = new QBarSet("Values");
-    for (int i = 0; i < sort->pubSize; ++i) {
+    for (int i = 0; i < sort->getSize(); ++i) {
         *set << sort->sorted[i];
     }
 
@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new Q
     auto* series = new QBarSeries();
     series->append(set);
 
-    auto* chart = new QChart();
+    chart = new QChart();
     chart->addSeries(series);
 
     auto* yAxis = new QValueAxis();
@@ -62,9 +62,11 @@ void MainWindow::onComboBoxChanged(int item) {
     switch (dynamic_cast<QComboBox*>(sender())->itemData(item).toInt()) {
         case 0:
             this->sort = new InsertionSort(20, this);
+            updateChart();
             break;
         case 1:
             this->sort = new SelectionSort(20, this);
+            updateChart();
             break;
     }
 }
@@ -75,6 +77,16 @@ void MainWindow::startSorting() {
 
 QBarSet *MainWindow::getSet() {
     return this->set;
+}
+
+QChart *MainWindow::getChart() {
+    return this->chart;
+}
+
+void MainWindow::updateChart() {
+    for (int i = 0; i < sort->getSize(); ++i) {
+        (*this->set).replace(i, sort->sorted[i]);
+    }
 }
 
 MainWindow::~MainWindow() = default;

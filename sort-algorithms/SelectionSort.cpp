@@ -3,6 +3,7 @@
 //
 #include "SelectionSort.h"
 #include "MainWindow.h"
+#include <thread>
 
 SelectionSort::~SelectionSort() {
     delete[] unsorted;
@@ -10,14 +11,14 @@ SelectionSort::~SelectionSort() {
 }
 
 void SelectionSort::sort() {
-    int minIndex = 0;
-    for (int i = 1; i < size && minIndex < size; ++i) {
-        for (int j = 0; j < size; ++j) {
-            minIndex = sorted[minIndex] >= sorted[j]? sorted[j] : minIndex;
+    for (int i = 0; i < size - 1; ++i) {
+        int minIndex = i;
+        for (int j = i + 1; j < size; ++j) {
+            minIndex = sorted[minIndex] >= sorted[j]? j : minIndex;
         }
-        int tmp = sorted[i];
-        sorted[i] = sorted[minIndex];
-        sorted[i] = tmp;
-        minIndex = i + 1;
+        std::swap(sorted[i], sorted[minIndex]);
+
+        //Update Gui
+        this->updateChart();
     }
 }

@@ -23,11 +23,7 @@ void InsertionSort::sort() {
         sorted[j + 1] = key;
 
         //Update barSet of chart in gui
-        for (int k = 0; k < size; ++k) {
-            *this->mainWindow->getSet() << sorted[k];
-        }
-
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        this->updateChart();
     }
 }
 

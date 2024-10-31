@@ -12,6 +12,7 @@ protected:
     int size;
     int* unsorted;
     MainWindow* mainWindow;
+    void updateChart();
 
 public:
     int* sorted;
@@ -19,6 +20,7 @@ public:
     ~Sort();
     virtual void sort() = 0;
     int pubSize;
+    int getSize();
 };
 
 

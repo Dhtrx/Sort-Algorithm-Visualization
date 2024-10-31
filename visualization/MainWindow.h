@@ -25,12 +25,15 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
     QBarSet* getSet();
+    QChart* getChart();
 
 private:
     QComboBox* algoChooser;
     void initAlgoChooser();
     Sort* sort;
     QBarSet* set;
+    QChart* chart;
+    void updateChart();
 
 
 private slots:

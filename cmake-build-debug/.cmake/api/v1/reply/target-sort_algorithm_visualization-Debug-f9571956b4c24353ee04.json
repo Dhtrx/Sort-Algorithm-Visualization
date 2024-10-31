@@ -59,13 +59,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 37,
+				"line" : 35,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 30,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
@@ -511,8 +511,7 @@
 				3,
 				5,
 				6,
-				9,
-				11
+				9
 			]
 		}
 	],
@@ -658,8 +657,7 @@
 				3,
 				5,
 				6,
-				9,
-				11
+				9
 			]
 		},
 		{
@@ -670,8 +668,7 @@
 				2,
 				4,
 				7,
-				8,
-				10
+				8
 			]
 		}
 	],
@@ -720,17 +717,6 @@
 			"backtrace" : 1,
 			"path" : "sort-algorithms/SelectionSort.h",
 			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Test.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Test.cpp",
-			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,

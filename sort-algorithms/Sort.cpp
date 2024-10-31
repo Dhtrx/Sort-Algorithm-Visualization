@@ -5,6 +5,7 @@
 #include "Sort.h"
 #include "Utils.h"
 #include "MainWindow.h"
+#include <thread>
 
 Sort::Sort(int size, MainWindow* mainWindow) {
     this->mainWindow = mainWindow;
@@ -20,4 +21,18 @@ Sort::Sort(int size, MainWindow* mainWindow) {
 Sort::~Sort() {
     delete[] unsorted;
     delete[] sorted;
+}
+
+int Sort::getSize() {
+    return this->size;
+}
+
+void Sort::updateChart() {
+    for (int k = 0; k < size; ++k) {
+        (*this->mainWindow->getSet()).replace(k, sorted[k]);
+    }
+
+    QApplication::processEvents();
+
+    std::this_thread::sleep_for(std::chrono::seconds(1));
 }
