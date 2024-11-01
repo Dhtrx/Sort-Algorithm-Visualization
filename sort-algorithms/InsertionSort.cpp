@@ -16,14 +16,13 @@ void InsertionSort::sort() {
         int j = i - 1;
 
         while (j >= 0 && sorted[j] > key) {
+            this->updateChart(j);
             sorted[j + 1] = sorted[j];
-            j = j - 1;
+            this->updateChart(j + 1);
+            j--;
         }
 
         sorted[j + 1] = key;
-
-        //Update barSet of chart in gui
-        this->updateChart(i);
     }
 }
 

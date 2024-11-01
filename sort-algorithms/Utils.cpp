@@ -10,7 +10,7 @@ using namespace std;
 void Utils::initArrRandom(int* arr, int size) {
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> distribution(0, size);
+    uniform_int_distribution<> distribution(1, size);
 
     for (int i = 0; i < size; ++i) {
         arr[i] = distribution(gen);

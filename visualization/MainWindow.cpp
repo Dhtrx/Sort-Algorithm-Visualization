@@ -11,7 +11,7 @@
 #include "QChart"
 #include "MergeSort.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(20, this)) {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(50, this)) {
     resize(600, 400);
     setWindowTitle("Sort Algorithm Visualization");
 
@@ -67,15 +67,15 @@ void MainWindow::initAlgoChooser() {
 void MainWindow::onComboBoxChanged(int item) {
     switch (dynamic_cast<QComboBox*>(sender())->itemData(item).toInt()) {
         case 0:
-            this->sort = new InsertionSort(20, this);
+            this->sort = new InsertionSort(50, this);
             updateChart();
             break;
         case 1:
-            this->sort = new SelectionSort(20, this);
+            this->sort = new SelectionSort(50, this);
             updateChart();
             break;
         case 2:
-            this->sort = new MergeSort(20, this);
+            this->sort = new MergeSort(50, this);
             updateChart();
             break;
     }

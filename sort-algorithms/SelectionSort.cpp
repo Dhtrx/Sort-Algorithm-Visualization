@@ -21,7 +21,6 @@ void SelectionSort::sort() {
 
         std::swap(sorted[i], sorted[minIndex]);
 
-        this->updateChart(i
-        );
+        this->updateChart(i);
     }
 }

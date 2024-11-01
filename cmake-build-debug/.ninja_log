@@ -46,3 +46,17 @@
 10911	11376	7521582188733453	sort_algorithm_visualization.exe	39a5bcb2220f13d6
 16	11379	7521583677103346	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj	3b98a5fec6276f0e
 11380	11844	7521583681707757	sort_algorithm_visualization.exe	39a5bcb2220f13d6
+20	18077	7521705715821958	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/SelectionSort.cpp.obj	3b98a5fec6276f0e
+41	18119	7521705716271195	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj	d16b64a53a51b960
+18120	19221	7521705727213525	sort_algorithm_visualization.exe	39a5bcb2220f13d6
+22	2301	7521706539483370	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Utils.cpp.obj	750497857bf9aee
+38	13659	7521706653053064	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj	d16b64a53a51b960
+13660	14174	7521706658118975	sort_algorithm_visualization.exe	39a5bcb2220f13d6
+13	10696	7521710958885766	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj	d16b64a53a51b960
+10697	11171	7521710963582906	sort_algorithm_visualization.exe	39a5bcb2220f13d6
+16	10482	7521711460732380	CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/InsertionSort.cpp.obj	d16b64a53a51b960
+10483	10971	7521711465266502	sort_algorithm_visualization.exe	39a5bcb2220f13d6
+11	13921	7521712543925491	CMakeFiles/sort_algorithm_visualization.dir/visualization/MainWindow.cpp.obj	e6b1b2338cf149a1
+13922	14377	7521712548437820	sort_algorithm_visualization.exe	39a5bcb2220f13d6
+16	13360	7521713122052561	CMakeFiles/sort_algorithm_visualization.dir/visualization/MainWindow.cpp.obj	e6b1b2338cf149a1
+13361	13819	7521713126569881	sort_algorithm_visualization.exe	39a5bcb2220f13d6
