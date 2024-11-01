@@ -44,13 +44,12 @@ void MergeSort::merge(int *arr, int left, int mid, int right) {
         arr[k] = rightArr[j];
         j++;
         k++;
-        this->updateChart();
     }
 
     delete[] leftArr;
     delete[] rightArr;
 
-    this->updateChart();
+    this->updateChart(i);
 }
 
 void MergeSort::sortRec(int *arr, int left, int right) {

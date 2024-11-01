@@ -26,13 +26,17 @@ public:
     ~MainWindow() override;
     QBarSet* getSet();
     QChart* getChart();
+    QChartView* getView();
+    QBarSet* getHighlighted();
 
 private:
     QComboBox* algoChooser;
     void initAlgoChooser();
     Sort* sort;
     QBarSet* set;
+    QBarSet* highlighted;
     QChart* chart;
+    QChartView* view;
     void updateChart();
 
 

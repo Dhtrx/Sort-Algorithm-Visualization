@@ -16,9 +16,12 @@ void SelectionSort::sort() {
         for (int j = i + 1; j < size; ++j) {
             minIndex = sorted[minIndex] >= sorted[j]? j : minIndex;
         }
+
+        this->updateChart(minIndex);
+
         std::swap(sorted[i], sorted[minIndex]);
 
-        //Update Gui
-        this->updateChart();
+        this->updateChart(i
+        );
     }
 }

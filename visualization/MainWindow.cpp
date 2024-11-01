@@ -23,14 +23,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new Q
     connect(algoChooser, &QComboBox::currentIndexChanged, this, &MainWindow::onComboBoxChanged);
 
     //Init Standard bar diagram with values from standard sort algorithm insertion sort
-    set = new QBarSet("Values");
+    set = new QBarSet("");
+    highlighted = new QBarSet("");
+    highlighted->setColor(QColor("red"));
     for (int i = 0; i < sort->getSize(); ++i) {
         *set << sort->sorted[i];
+        *highlighted << 0;
     }
 
     //Init Chart
     auto* series = new QBarSeries();
     series->append(set);
+    series->append(highlighted);
 
     chart = new QChart();
     chart->addSeries(series);
@@ -40,7 +44,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new Q
     chart->addAxis(yAxis, Qt::AlignLeft);
 
     //Init chart view of chart
-    auto* view = new QChartView(chart);
+    view = new QChartView(chart);
 
     //Init button for starting the sorting algorithm
     auto* button = new QPushButton("Sort");
@@ -92,7 +96,16 @@ QChart *MainWindow::getChart() {
 void MainWindow::updateChart() {
     for (int i = 0; i < sort->getSize(); ++i) {
         (*this->set).replace(i, sort->sorted[i]);
+        (*this->highlighted).replace(i, 0);
     }
+}
+
+QChartView *MainWindow::getView() {
+    return this->view;
+}
+
+QBarSet *MainWindow::getHighlighted() {
+    return this->highlighted;
 }
 
 MainWindow::~MainWindow() = default;

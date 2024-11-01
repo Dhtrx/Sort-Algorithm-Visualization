@@ -27,9 +27,15 @@ int Sort::getSize() {
     return this->size;
 }
 
-void Sort::updateChart() {
+void Sort::updateChart(int highlightedIndex) {
     for (int k = 0; k < size; ++k) {
-        (*this->mainWindow->getSet()).replace(k, sorted[k]);
+        if (k == highlightedIndex) {
+            (*this->mainWindow->getHighlighted()).replace(k, sorted[k]);
+            (*this->mainWindow->getSet()).replace(k, 0);
+        } else {
+            (*this->mainWindow->getHighlighted()).replace(k, 0);
+            (*this->mainWindow->getSet()).replace(k, sorted[k]);
+        }
     }
 
     QApplication::processEvents();

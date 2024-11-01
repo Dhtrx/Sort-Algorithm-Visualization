@@ -12,7 +12,7 @@ protected:
     int size;
     int* unsorted;
     MainWindow* mainWindow;
-    void updateChart();
+    void updateChart(int highlightedIndex);
 
 public:
     int* sorted;

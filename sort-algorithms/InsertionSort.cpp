@@ -23,7 +23,7 @@ void InsertionSort::sort() {
         sorted[j + 1] = key;
 
         //Update barSet of chart in gui
-        this->updateChart();
+        this->updateChart(i);
     }
 }
 
