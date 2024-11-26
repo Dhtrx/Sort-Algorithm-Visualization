@@ -25,9 +25,14 @@ add_executable(sort_algorithm_visualization
         visualization/MainWindow.cpp
         sort-algorithms/MergeSort.cpp
         sort-algorithms/MergeSort.h
+        visualization/Renderer.h
+        visualization/Renderer.cpp
+        visualization/Bar.h
+        visualization/Bar.cpp
 )
 
-find_package(Qt6 COMPONENTS Core Gui Qml Quick Widgets Charts REQUIRED)
+find_package(Qt6 COMPONENTS Core Gui Qml Quick Widgets Charts OpenGLWidgets OpenGL REQUIRED)
+find_package(OpenGL REQUIRED)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
@@ -41,4 +46,8 @@ target_link_libraries(sort_algorithm_visualization
         Qt6::Quick
         Qt6::Widgets
         Qt6::Charts
+        Qt6::OpenGLWidgets
+        Qt6::OpenGL
+        OpenGL::GL
+        OpenGL::GLU
 )

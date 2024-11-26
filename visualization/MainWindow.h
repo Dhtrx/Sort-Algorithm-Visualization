@@ -7,9 +7,11 @@
 
 #include <QApplication>
 #include <QWidget>
+#include <QOpenGLWidget>
 #include <QLabel>
 #include <QComboBox>
 #include <QMainWindow>
+#include <Renderer.h>
 
 #include "InsertionSort.h"
 #include "SelectionSort.h"
@@ -19,32 +21,27 @@
 #include "QBarSeries"
 #include "QChartView"
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QOpenGLWidget {
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow() override;
-    QBarSet* getSet();
-    QChart* getChart();
-    QChartView* getView();
-    QBarSet* getHighlighted();
+    ~MainWindow();
 
 private:
     QComboBox* algoChooser;
     void initAlgoChooser();
     Sort* sort;
-    QBarSet* set;
-    QBarSet* highlighted;
-    QChart* chart;
-    QChartView* view;
+    Renderer* renderer;
     void updateChart();
 
+protected:
+    void initializeGL();
+    void resizeGL(int w, int h);
+    void paintGL();
 
 private slots:
     void onComboBoxChanged(int item);
     void startSorting();
-
-    void merge(int *arr, int left, int mid, int right);
 };
 
 #endif //SORT_ALGORITHM_VISUALIZATION_MAINWINDOW_H

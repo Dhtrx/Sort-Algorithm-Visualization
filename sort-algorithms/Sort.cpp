@@ -28,17 +28,4 @@ int Sort::getSize() {
 }
 
 void Sort::updateChart(int highlightedIndex) {
-    for (int k = 0; k < size; ++k) {
-        if (k == highlightedIndex) {
-            (*this->mainWindow->getHighlighted()).replace(k, sorted[k]);
-            (*this->mainWindow->getSet()).replace(k, 0);
-        } else {
-            (*this->mainWindow->getHighlighted()).replace(k, 0);
-            (*this->mainWindow->getSet()).replace(k, sorted[k]);
-        }
-    }
-
-    QApplication::processEvents();
-
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
 }

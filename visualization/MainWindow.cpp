@@ -11,7 +11,7 @@
 #include "QChart"
 #include "MergeSort.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(50, this)) {
+MainWindow::MainWindow(QWidget *parent) : QOpenGLWidget(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(20, this)), renderer(new Renderer()) {
     resize(600, 400);
     setWindowTitle("Sort Algorithm Visualization");
 
@@ -23,39 +23,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), algoChooser(new Q
     connect(algoChooser, &QComboBox::currentIndexChanged, this, &MainWindow::onComboBoxChanged);
 
     //Init Standard bar diagram with values from standard sort algorithm insertion sort
-    set = new QBarSet("");
-    highlighted = new QBarSet("");
-    highlighted->setColor(QColor("red"));
-    for (int i = 0; i < sort->getSize(); ++i) {
-        *set << sort->sorted[i];
-        *highlighted << 0;
+    for (int i = 0; i < 20; ++i) {
+        float mappedVal = 2.0f * ((static_cast<float>(sort->sorted[i]) / 19.0f) - 1.0f);
+        renderer->getBars().push_back(new Bar(mappedVal, (2.0f * (static_cast<float>(i) / 19.0f) - 1.0f)));
     }
-
-    //Init Chart
-    auto* series = new QBarSeries();
-    series->append(set);
-    series->append(highlighted);
-
-    chart = new QChart();
-    chart->addSeries(series);
-
-    auto* yAxis = new QValueAxis();
-    yAxis->setRange(0, 10);
-    chart->addAxis(yAxis, Qt::AlignLeft);
-
-    //Init chart view of chart
-    view = new QChartView(chart);
-
-    //Init button for starting the sorting algorithm
-    auto* button = new QPushButton("Sort");
-    connect(button, &QPushButton::clicked, this, &MainWindow::startSorting);
-
-    layout->addWidget(algoChooser);
-    layout->addWidget(view);
-    layout->addWidget(button);
-
-    setCentralWidget(widget);
-
 }
 
 void MainWindow::initAlgoChooser() {
@@ -67,15 +38,15 @@ void MainWindow::initAlgoChooser() {
 void MainWindow::onComboBoxChanged(int item) {
     switch (dynamic_cast<QComboBox*>(sender())->itemData(item).toInt()) {
         case 0:
-            this->sort = new InsertionSort(50, this);
+            this->sort = new InsertionSort(20, this);
             updateChart();
             break;
         case 1:
-            this->sort = new SelectionSort(50, this);
+            this->sort = new SelectionSort(20, this);
             updateChart();
             break;
         case 2:
-            this->sort = new MergeSort(50, this);
+            this->sort = new MergeSort(20, this);
             updateChart();
             break;
     }
@@ -85,27 +56,21 @@ void MainWindow::startSorting() {
     sort->sort();
 }
 
-QBarSet *MainWindow::getSet() {
-    return this->set;
+void MainWindow::initializeGL() {
+    renderer->init();
 }
 
-QChart *MainWindow::getChart() {
-    return this->chart;
+void MainWindow::paintGL() {
+    renderer->display();
 }
+
+void MainWindow::resizeGL(int w, int h) {
+    renderer->resize(w, h);
+}
+
 
 void MainWindow::updateChart() {
-    for (int i = 0; i < sort->getSize(); ++i) {
-        (*this->set).replace(i, sort->sorted[i]);
-        (*this->highlighted).replace(i, 0);
-    }
-}
 
-QChartView *MainWindow::getView() {
-    return this->view;
-}
-
-QBarSet *MainWindow::getHighlighted() {
-    return this->highlighted;
 }
 
 MainWindow::~MainWindow() = default;
