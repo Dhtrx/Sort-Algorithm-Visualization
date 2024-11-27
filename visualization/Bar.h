@@ -12,6 +12,12 @@ private:
     float width;
     float pos;
     int glType;
+    struct Color {
+        float r;
+        float g;
+        float b;
+    };
+    Color color;
 public:
     Bar(float height, float pos);
     float getHeight();
@@ -19,8 +25,10 @@ public:
     float getPos();
     int getGLType();
 
+    void setHeight(float height);
     void setPos(float pos);
-    void toVertecies();
+    void setColor(float r, float g, float b);
+    void toVertecies() const;
 };
 
 

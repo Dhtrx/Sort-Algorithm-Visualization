@@ -30,7 +30,7 @@
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaTargets.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfig.cmake",
-			"C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake",
+			"C:/Program Files/JetBrains/CLion 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlTargets.cmake",
@@ -57,13 +57,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 42,
+				"line" : 46,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 34,
+				"line" : 38,
 				"parent" : 0
 			},
 			{
@@ -379,18 +379,18 @@
 			"includes" : 
 			[
 				{
-					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization/cmake-build-debug"
+					"path" : "C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/cmake-build-debug"
 				},
 				{
-					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization"
+					"path" : "C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization"
 				},
 				{
 					"backtrace" : 43,
-					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization/sort-algorithms"
+					"path" : "C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/sort-algorithms"
 				},
 				{
 					"backtrace" : 44,
-					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization/visualization"
+					"path" : "C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/visualization"
 				},
 				{
 					"backtrace" : 2,
@@ -486,7 +486,8 @@
 				9,
 				10,
 				13,
-				15
+				15,
+				16
 			]
 		}
 	],
@@ -650,7 +651,8 @@
 				9,
 				10,
 				13,
-				15
+				15,
+				16
 			]
 		},
 		{
@@ -664,7 +666,8 @@
 				8,
 				11,
 				12,
-				14
+				14,
+				17
 			]
 		}
 	],
@@ -757,6 +760,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "visualization/Bar.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sort-algorithms/BubbleSort.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "sort-algorithms/BubbleSort.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

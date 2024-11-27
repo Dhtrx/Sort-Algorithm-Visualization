@@ -10,6 +10,9 @@ Bar::Bar(float height, float pos) {
     this-> pos = pos;
     width = .05;
     glType = GL_QUADS;
+    color.r = 1;
+    color.g = 1;
+    color.b = 1;
 }
 
 float Bar::getHeight() {
@@ -28,7 +31,8 @@ void Bar::setPos(float pos) {
     this->pos = pos;
 }
 
-void Bar::toVertecies() {
+void Bar::toVertecies() const {
+    glColor3f(color.r, color.g, color.b);
     glVertex2f(pos, 0);
     glVertex2f(pos + width, 0);
     glVertex2f(pos + width, height);
@@ -37,4 +41,14 @@ void Bar::toVertecies() {
 
 int Bar::getGLType() {
     return glType;
+}
+
+void Bar::setColor(float r, float g, float b) {
+    this->color.r = r;
+    this->color.g = g;
+    this->color.b = b;
+}
+
+void Bar::setHeight(float height) {
+    this->height = height;
 }

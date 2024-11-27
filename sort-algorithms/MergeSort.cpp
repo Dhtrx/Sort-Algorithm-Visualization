@@ -21,11 +21,14 @@ void MergeSort::merge(int *arr, int left, int mid, int right) {
 
     // Merge of temporary arrays
     int i = 0, j = 0, k = left;
+
     while (i < n1 && j < n2) {
         if (leftArr[i] <= rightArr[j]) {
+            this->updateChart(left + i);
             arr[k] = leftArr[i];
             i++;
         } else {
+            this->updateChart(mid + 1 + j);
             arr[k] = rightArr[j];
             j++;
         }
@@ -34,6 +37,7 @@ void MergeSort::merge(int *arr, int left, int mid, int right) {
 
     // Copy remaining elements of leftArr if necessary
     while (i < n1) {
+        this->updateChart(left + i);
         arr[k] = leftArr[i];
         i++;
         k++;
@@ -41,6 +45,7 @@ void MergeSort::merge(int *arr, int left, int mid, int right) {
 
     //Copy remaining elements of rightArr if necessary
     while (j < n2) {
+        this->updateChart(mid + 1 + i);
         arr[k] = rightArr[j];
         j++;
         k++;
@@ -49,7 +54,7 @@ void MergeSort::merge(int *arr, int left, int mid, int right) {
     delete[] leftArr;
     delete[] rightArr;
 
-    this->updateChart(i);
+    this->updateChart(k - 1);
 }
 
 void MergeSort::sortRec(int *arr, int left, int right) {

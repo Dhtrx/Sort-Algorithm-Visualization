@@ -128,6 +128,30 @@ sort_algorithm_visualization/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/build
 .PHONY : sort_algorithm_visualization/fast
 
+sort-algorithms/BubbleSort.obj: sort-algorithms/BubbleSort.cpp.obj
+.PHONY : sort-algorithms/BubbleSort.obj
+
+# target to build an object file
+sort-algorithms/BubbleSort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/BubbleSort.cpp.obj
+.PHONY : sort-algorithms/BubbleSort.cpp.obj
+
+sort-algorithms/BubbleSort.i: sort-algorithms/BubbleSort.cpp.i
+.PHONY : sort-algorithms/BubbleSort.i
+
+# target to preprocess a source file
+sort-algorithms/BubbleSort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/BubbleSort.cpp.i
+.PHONY : sort-algorithms/BubbleSort.cpp.i
+
+sort-algorithms/BubbleSort.s: sort-algorithms/BubbleSort.cpp.s
+.PHONY : sort-algorithms/BubbleSort.s
+
+# target to generate assembly for a file
+sort-algorithms/BubbleSort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/BubbleSort.cpp.s
+.PHONY : sort-algorithms/BubbleSort.cpp.s
+
 sort-algorithms/InsertionSort.obj: sort-algorithms/InsertionSort.cpp.obj
 .PHONY : sort-algorithms/InsertionSort.obj
 
@@ -248,6 +272,78 @@ sort-algorithms/Utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/sort-algorithms/Utils.cpp.s
 .PHONY : sort-algorithms/Utils.cpp.s
 
+visualization/Bar.obj: visualization/Bar.cpp.obj
+.PHONY : visualization/Bar.obj
+
+# target to build an object file
+visualization/Bar.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/Bar.cpp.obj
+.PHONY : visualization/Bar.cpp.obj
+
+visualization/Bar.i: visualization/Bar.cpp.i
+.PHONY : visualization/Bar.i
+
+# target to preprocess a source file
+visualization/Bar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/Bar.cpp.i
+.PHONY : visualization/Bar.cpp.i
+
+visualization/Bar.s: visualization/Bar.cpp.s
+.PHONY : visualization/Bar.s
+
+# target to generate assembly for a file
+visualization/Bar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/Bar.cpp.s
+.PHONY : visualization/Bar.cpp.s
+
+visualization/MainWindow.obj: visualization/MainWindow.cpp.obj
+.PHONY : visualization/MainWindow.obj
+
+# target to build an object file
+visualization/MainWindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/MainWindow.cpp.obj
+.PHONY : visualization/MainWindow.cpp.obj
+
+visualization/MainWindow.i: visualization/MainWindow.cpp.i
+.PHONY : visualization/MainWindow.i
+
+# target to preprocess a source file
+visualization/MainWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/MainWindow.cpp.i
+.PHONY : visualization/MainWindow.cpp.i
+
+visualization/MainWindow.s: visualization/MainWindow.cpp.s
+.PHONY : visualization/MainWindow.s
+
+# target to generate assembly for a file
+visualization/MainWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/MainWindow.cpp.s
+.PHONY : visualization/MainWindow.cpp.s
+
+visualization/Renderer.obj: visualization/Renderer.cpp.obj
+.PHONY : visualization/Renderer.obj
+
+# target to build an object file
+visualization/Renderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/Renderer.cpp.obj
+.PHONY : visualization/Renderer.cpp.obj
+
+visualization/Renderer.i: visualization/Renderer.cpp.i
+.PHONY : visualization/Renderer.i
+
+# target to preprocess a source file
+visualization/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/Renderer.cpp.i
+.PHONY : visualization/Renderer.cpp.i
+
+visualization/Renderer.s: visualization/Renderer.cpp.s
+.PHONY : visualization/Renderer.s
+
+# target to generate assembly for a file
+visualization/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sort_algorithm_visualization.dir\build.make CMakeFiles/sort_algorithm_visualization.dir/visualization/Renderer.cpp.s
+.PHONY : visualization/Renderer.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -257,6 +353,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... sort_algorithm_visualization
+	@echo ... sort-algorithms/BubbleSort.obj
+	@echo ... sort-algorithms/BubbleSort.i
+	@echo ... sort-algorithms/BubbleSort.s
 	@echo ... sort-algorithms/InsertionSort.obj
 	@echo ... sort-algorithms/InsertionSort.i
 	@echo ... sort-algorithms/InsertionSort.s
@@ -272,6 +371,15 @@ help:
 	@echo ... sort-algorithms/Utils.obj
 	@echo ... sort-algorithms/Utils.i
 	@echo ... sort-algorithms/Utils.s
+	@echo ... visualization/Bar.obj
+	@echo ... visualization/Bar.i
+	@echo ... visualization/Bar.s
+	@echo ... visualization/MainWindow.obj
+	@echo ... visualization/MainWindow.i
+	@echo ... visualization/MainWindow.s
+	@echo ... visualization/Renderer.obj
+	@echo ... visualization/Renderer.i
+	@echo ... visualization/Renderer.s
 .PHONY : help
 
 

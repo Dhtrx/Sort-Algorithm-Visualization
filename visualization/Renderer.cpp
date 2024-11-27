@@ -22,8 +22,7 @@ void Renderer::display() {
 
     for (Bar* bar: bars) {
         glLoadIdentity();
-        glTranslatef(0, -.5, 0);
-        glRotatef(180, 0, 0 , 1);
+        glTranslatef(0, -.9, 0);
         glBegin(bar->getGLType());
         bar->toVertecies();
         glEnd();

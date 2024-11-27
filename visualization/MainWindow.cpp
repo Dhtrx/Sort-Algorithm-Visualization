@@ -3,29 +3,41 @@
 //
 
 #include "MainWindow.h"
-#include "Sort.h"
 #include <QVBoxLayout>
-#include <iostream>
 #include <QtCharts>
 #include "QChartView"
 #include "QChart"
 #include "MergeSort.h"
+#include "BubbleSort.h"
 
-MainWindow::MainWindow(QWidget *parent) : QOpenGLWidget(parent), algoChooser(new QComboBox(this)), sort(new InsertionSort(20, this)), renderer(new Renderer()) {
+MainWindow::MainWindow(QWidget *parent) : QOpenGLWidget(parent),
+algoChooser(new QComboBox(this)),
+sort(new InsertionSort(20, this)),
+renderer(new Renderer()),
+sortButton(new QPushButton(this)) {
+
     resize(600, 400);
     setWindowTitle("Sort Algorithm Visualization");
 
     auto *widget = new QWidget(this);
-    auto *layout = new QVBoxLayout(widget);
+    auto *layout = new QHBoxLayout(widget);
 
-    //Initialize and connect ComboBox algoChooser
+    //Initialize and connect ComboBox algoChooser and Button sortButton
     this->initAlgoChooser();
     connect(algoChooser, &QComboBox::currentIndexChanged, this, &MainWindow::onComboBoxChanged);
+    connect(sortButton, &QPushButton::clicked, this, &MainWindow::startSorting);
+    sortButton->setText("Sort");
 
+    layout->addWidget(algoChooser);
+    layout->addWidget(sortButton);
     //Init Standard bar diagram with values from standard sort algorithm insertion sort
-    for (int i = 0; i < 20; ++i) {
-        float mappedVal = 2.0f * ((static_cast<float>(sort->sorted[i]) / 19.0f) - 1.0f);
-        renderer->getBars().push_back(new Bar(mappedVal, (2.0f * (static_cast<float>(i) / 19.0f) - 1.0f)));
+    for (int i = 0; i < sort->getSize(); ++i) {
+        auto j = static_cast<float>(i);
+        auto size = static_cast<float>(sort->getSize());
+        auto val = static_cast<float>(sort->sorted[i]);
+        float mappedVal = (val / (size - 1.0f)) + 1e-6f;
+        float p = -1.0f + (j * (0.95f - -1)) / size;
+        renderer->getBars().push_back(new Bar(mappedVal, p));
     }
 }
 
@@ -33,6 +45,7 @@ void MainWindow::initAlgoChooser() {
     this->algoChooser->addItem("Insertion Sort", QVariant(0));
     this->algoChooser->addItem("Selection Sort", QVariant(1));
     this->algoChooser->addItem("Merge Sort", QVariant(2));
+    this->algoChooser->addItem("Bubble Sort", QVariant(3));
 }
 
 void MainWindow::onComboBoxChanged(int item) {
@@ -47,6 +60,10 @@ void MainWindow::onComboBoxChanged(int item) {
             break;
         case 2:
             this->sort = new MergeSort(20, this);
+            updateChart();
+            break;
+        case 3:
+            this->sort = new BubbleSort(20, this);
             updateChart();
             break;
     }
@@ -70,7 +87,23 @@ void MainWindow::resizeGL(int w, int h) {
 
 
 void MainWindow::updateChart() {
+    for (int i = 0; i < sort->getSize(); ++i) {
+        auto j = static_cast<float>(i);
+        auto size = static_cast<float>(sort->getSize());
+        auto val = static_cast<float>(sort->sorted[i]);
 
+        float mappedVal = ((val / (size - 1.0f)) + 1e-6f);
+        float p = -1.0f + (j * (0.95f - -1)) / size;
+
+        renderer->getBars().at(i)->setPos(p);
+        renderer->getBars().at(i)->setHeight(mappedVal);
+    }
+
+    update();
+}
+
+Renderer* MainWindow::getRenderer() {
+    return renderer;
 }
 
 MainWindow::~MainWindow() = default;

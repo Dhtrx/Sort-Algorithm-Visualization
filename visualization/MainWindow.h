@@ -26,13 +26,15 @@ class MainWindow : public QOpenGLWidget {
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void updateChart();
+    Renderer *getRenderer();
 
 private:
     QComboBox* algoChooser;
+    QPushButton* sortButton;
     void initAlgoChooser();
     Sort* sort;
     Renderer* renderer;
-    void updateChart();
 
 protected:
     void initializeGL();

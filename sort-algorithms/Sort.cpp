@@ -28,4 +28,15 @@ int Sort::getSize() {
 }
 
 void Sort::updateChart(int highlightedIndex) {
+    for (int i = 0; i < mainWindow->getRenderer()->getBars().size(); ++i) {
+        if (i == highlightedIndex) {
+            mainWindow->getRenderer()->getBars().at(i)->setColor(1, 0, 0);
+        } else {
+            mainWindow->getRenderer()->getBars().at(i)->setColor(1, 1, 1);
+        }
+    }
+    mainWindow->updateChart();
+
+    QApplication::processEvents();
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
 }

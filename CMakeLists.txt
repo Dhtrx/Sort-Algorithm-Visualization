@@ -29,6 +29,10 @@ add_executable(sort_algorithm_visualization
         visualization/Renderer.cpp
         visualization/Bar.h
         visualization/Bar.cpp
+        sort-algorithms/BubbleSort.cpp
+        sort-algorithms/BubbleSort.h
+        sort-algorithms/BubbleSort.h
+        sort-algorithms/BubbleSort.cpp
 )
 
 find_package(Qt6 COMPONENTS Core Gui Qml Quick Widgets Charts OpenGLWidgets OpenGL REQUIRED)
