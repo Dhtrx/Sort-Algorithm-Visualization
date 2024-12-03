@@ -8,7 +8,7 @@
 Bar::Bar(float height, float pos) {
     this->height = height;
     this-> pos = pos;
-    width = .05;
+    width = .01;
     glType = GL_QUADS;
     color.r = 1;
     color.g = 1;
@@ -51,4 +51,8 @@ void Bar::setColor(float r, float g, float b) {
 
 void Bar::setHeight(float height) {
     this->height = height;
+}
+
+void Bar::setWidth(float width) {
+    this->width = width;
 }

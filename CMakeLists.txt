@@ -3,8 +3,6 @@ project(sort_algorithm_visualization)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-#set(CMAKE_PREFIX_PATH "C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6")
-#set(QML_IMPORT_PATH "${CMAKE_PREFIX_PATH}/qml")
 set(SOURCES main.cpp visualization/SortAlgorithmGui/SortAlgorithmGuiContent/resources.qrc)
 
 include_directories(sort-algorithms)

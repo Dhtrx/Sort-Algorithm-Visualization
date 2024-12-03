@@ -1,10 +1,10 @@
 //
 // Created by User on 29.10.2024.
 //
-
 #include "MainWindow.h"
 #include <QVBoxLayout>
 #include <QtCharts>
+#include <iostream>
 #include "QChartView"
 #include "QChart"
 #include "MergeSort.h"
@@ -12,9 +12,10 @@
 
 MainWindow::MainWindow(QWidget *parent) : QOpenGLWidget(parent),
 algoChooser(new QComboBox(this)),
-sort(new InsertionSort(20, this)),
+sort(new InsertionSort(100, this)),
 renderer(new Renderer()),
-sortButton(new QPushButton(this)) {
+sortButton(new QPushButton(this)),
+speed(new QSlider(Qt::Horizontal)) {
 
     resize(600, 400);
     setWindowTitle("Sort Algorithm Visualization");
@@ -26,10 +27,14 @@ sortButton(new QPushButton(this)) {
     this->initAlgoChooser();
     connect(algoChooser, &QComboBox::currentIndexChanged, this, &MainWindow::onComboBoxChanged);
     connect(sortButton, &QPushButton::clicked, this, &MainWindow::startSorting);
+    connect(speed, &QSlider::valueChanged, this, &MainWindow::changeSpeed);
+
     sortButton->setText("Sort");
+    speed->setValue(50);
 
     layout->addWidget(algoChooser);
     layout->addWidget(sortButton);
+    layout->addWidget(speed);
     //Init Standard bar diagram with values from standard sort algorithm insertion sort
     for (int i = 0; i < sort->getSize(); ++i) {
         auto j = static_cast<float>(i);
@@ -44,26 +49,26 @@ sortButton(new QPushButton(this)) {
 void MainWindow::initAlgoChooser() {
     this->algoChooser->addItem("Insertion Sort", QVariant(0));
     this->algoChooser->addItem("Selection Sort", QVariant(1));
-    this->algoChooser->addItem("Merge Sort", QVariant(2));
+    //this->algoChooser->addItem("Merge Sort", QVariant(2));
     this->algoChooser->addItem("Bubble Sort", QVariant(3));
 }
 
 void MainWindow::onComboBoxChanged(int item) {
     switch (dynamic_cast<QComboBox*>(sender())->itemData(item).toInt()) {
         case 0:
-            this->sort = new InsertionSort(20, this);
+            this->sort = new InsertionSort(100, this);
             updateChart();
             break;
         case 1:
-            this->sort = new SelectionSort(20, this);
+            this->sort = new SelectionSort(100, this);
             updateChart();
             break;
         case 2:
-            this->sort = new MergeSort(20, this);
+            this->sort = new MergeSort(100, this);
             updateChart();
             break;
         case 3:
-            this->sort = new BubbleSort(20, this);
+            this->sort = new BubbleSort(100, this);
             updateChart();
             break;
     }
@@ -104,6 +109,14 @@ void MainWindow::updateChart() {
 
 Renderer* MainWindow::getRenderer() {
     return renderer;
+}
+
+void MainWindow::changeSpeed(int value) {
+    waitTime = (100 - value) * 10;
+}
+
+int MainWindow::getSpeed() {
+    return waitTime;
 }
 
 MainWindow::~MainWindow() = default;

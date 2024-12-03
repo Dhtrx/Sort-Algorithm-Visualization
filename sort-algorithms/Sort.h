@@ -5,6 +5,10 @@
 #ifndef SORT_ALGORITHM_VISUALIZATION_SORT_H
 #define SORT_ALGORITHM_VISUALIZATION_SORT_H
 
+#include <thread>
+
+using namespace std;
+
 class MainWindow;
 
 class Sort {
@@ -13,6 +17,8 @@ protected:
     int* unsorted;
     MainWindow* mainWindow;
     void updateChart(int highlightedIndex);
+    int highlighted;
+
 
 public:
     int* sorted;

@@ -28,13 +28,16 @@ public:
     ~MainWindow();
     void updateChart();
     Renderer *getRenderer();
+    int getSpeed();
 
 private:
     QComboBox* algoChooser;
     QPushButton* sortButton;
+    QSlider* speed;
     void initAlgoChooser();
     Sort* sort;
     Renderer* renderer;
+    int waitTime = 500;
 
 protected:
     void initializeGL();
@@ -44,6 +47,7 @@ protected:
 private slots:
     void onComboBoxChanged(int item);
     void startSorting();
+    void changeSpeed(int value);
 };
 
 #endif //SORT_ALGORITHM_VISUALIZATION_MAINWINDOW_H

@@ -13,6 +13,7 @@ Sort::Sort(int size, MainWindow* mainWindow) {
     this->size = size;
     this->unsorted = new int[size];
     this->sorted = new int[size];
+    this->highlighted = 0;
 
     Utils::initArrRandom(unsorted, size);
     Utils::copyArr(unsorted, sorted, size);
@@ -38,5 +39,7 @@ void Sort::updateChart(int highlightedIndex) {
     mainWindow->updateChart();
 
     QApplication::processEvents();
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    QEventLoop loop;
+    QTimer::singleShot(mainWindow->getSpeed(), &loop, &QEventLoop::quit);
+    loop.exec();
 }

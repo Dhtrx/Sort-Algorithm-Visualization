@@ -30,7 +30,7 @@
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaTargets.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfig.cmake",
-			"C:/Program Files/JetBrains/CLion 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake",
+			"C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake",
 			"C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlTargets.cmake",
@@ -51,19 +51,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 13,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 46,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 38,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
@@ -273,13 +273,13 @@
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 10,
+				"line" : 8,
 				"parent" : 0
 			},
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 11,
+				"line" : 9,
 				"parent" : 0
 			}
 		]
@@ -379,18 +379,18 @@
 			"includes" : 
 			[
 				{
-					"path" : "C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/cmake-build-debug"
+					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization/cmake-build-debug"
 				},
 				{
-					"path" : "C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization"
+					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization"
 				},
 				{
 					"backtrace" : 43,
-					"path" : "C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/sort-algorithms"
+					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization/sort-algorithms"
 				},
 				{
 					"backtrace" : 44,
-					"path" : "C:/Users/Anwender/CLionProjects/Sort-algorithm-visualization/visualization"
+					"path" : "C:/Users/User/CLionProjects/sort-algorithm-visualization/visualization"
 				},
 				{
 					"backtrace" : 2,

@@ -22,6 +22,7 @@ public:
     Bar(float height, float pos);
     float getHeight();
     float getWidth();
+    void setWidth(float width);
     float getPos();
     int getGLType();
 
